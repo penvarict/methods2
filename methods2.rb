@@ -16,6 +16,24 @@
 
 
 # TODO - write elevenish?
+
+
+def elevenish?(n) #22/11 =2 
+    de_n = n/11
+    de_nmo = (n-1)/11
+
+    if de_n * 11 == n || de_nmo * 11 == n
+        return true
+
+    else 
+        return false
+
+    end 
+    
+
+end
+
+
 	
 # TODO - write ice_cream_party?
 
