@@ -89,9 +89,28 @@ describe 'Methods2' do
     end
 
     it 'is it a good party?' do
-    successful_squirrel_party?(100,true).must_equal(true)
+      successful_squirrel_party?(100,true).must_equal(true)
 
     end
+
+
+
+  end
+
+
+
+  describe 'ticket' do
+      it 'is ticket sum of ten?' do
+        ticket(5,5,5).must_equal(10)
+      end
+
+      it 'is ticket sum of ten?' do
+        ticket(1,1,1).must_equal(0)
+      end
+
+      it 'is ticket sum of ten?' do
+        ticket(10,10,20).must_equal(5)  # 20+10 =30 == 30 (a+b)+10= (a+c) or (a+b)
+      end
 
 
 

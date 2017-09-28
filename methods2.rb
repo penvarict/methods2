@@ -67,7 +67,7 @@ def successful_squirrel_party?(nuts, weekend) #nuts ==  int weekend == true or f
 			return false
 		end
 	else
-		if nuts >= 40 && nuts <= 60
+		if nuts >= 40 && nuts <= 60 #40<nuts<60
 			return true
 		else
 			return false
@@ -79,7 +79,18 @@ def successful_squirrel_party?(nuts, weekend) #nuts ==  int weekend == true or f
 
 
 # TODO - write ticket
-
+def ticket(a, b, c)
+	ab = a + b
+	ac = a + c
+	bc = b + c
+	if ab == 10 || ac == 10 || bc == 10 #if any pair's sum is ten return ten
+		return 10
+	elsif ab + 10 == ac || ab + 10 == bc #if a+b+10=ac or bc return 5
+		return 5
+	else
+		return 0
+	end
+end
 # TODO - write in_order?
 
 # TODO - write less_by_ten?
