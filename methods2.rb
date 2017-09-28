@@ -93,9 +93,46 @@ def ticket(a, b, c)
 end
 # TODO - write in_order?
 
+def in_order?(a,b,c,bOK) #abc need to be in order, is bOK is true it can be abc or bac
+    if a < b && b < c
+        return true
+    elsif bOK == true && b<a && a<c
+        return true
+    else 
+        return false
+    end
+end
+
 # TODO - write less_by_ten?
 
+
+def less_by_ten?(a,b,c)
+
+    if a+10== b || a+10 == c || b+10== a||b+10 ==b || c+10 == a||c+10 == b
+        return true
+    else
+        return false
+    end
+
+
+end
 # TODO - write fizz_string
+def fizz_string(str)
+    if str[0] == "f"
+        return "Fizz"
+    end
+    if str[-1] == "b"
+        return "Buzz"
+    end
+
+    if str[0] == "f" && str[-1] == "b"
+        return "BuzzFizz"
+    else 
+        return str
+    end
+end
+
+
 
 # TODO - write first_last_six?
 

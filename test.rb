@@ -116,4 +116,65 @@ describe 'Methods2' do
 
   end
 
+  describe 'in_order?'do
+      it 'is it in order?' do
+        in_order?(5,5,2,false).must_equal(false)#out of order and false is false
+      end
+
+      it 'is it in order?' do
+        in_order?(1,2,3,false).must_equal(true) #if in order and bok is false then true
+      end
+
+      it 'is it in order?' do
+        in_order?(2,1,3,true).must_equal(true)  #order is BAC and BOk is true so true
+      end      
+
+      it 'is it in order?' do
+        in_order?(3,2,4,false).must_equal(false)  #BAC oder but bok is false so false
+      end      
+
+
+
+
+
+    end
+
+    describe 'less_by_ten?' do
+
+      it 'is it in order' do
+        less_by_ten?(2,12,3).must_equal(true) #12 is ten more than 2
+      end
+      it 'is it in order' do
+        less_by_ten?(1,1,3).must_equal(false) #none are more than 10
+      end
+      it 'is it in order' do
+        less_by_ten?(20,10,30).must_equal(true) #true, all of them are 10 more than others
+      end
+      it 'is it in order' do
+        less_by_ten?(0,10,3).must_equal(true) #true, 10 is 10 +0
+      end
+  
+    end
+
+    describe 'fizz_string'do
+      it 'does a string start with f or end with b' do
+        fizz_string("yomomma").must_equal("yomomma")
+      end
+      it 'does a string start with f or end with b' do
+        fizz_string("famb").must_equal("BuzzFizz")
+      end
+      it 'does a string start with f or end with b' do
+        fizz_string("fork").must_equal("Fizz")
+      end
+      it 'does a string start with f or end with b' do
+        fizz_string("dab").must_equal("Buzz")
+      end
+
+    end
+
+    describe 'first_last_six?' do
+      it
+
+
+    end
 end
