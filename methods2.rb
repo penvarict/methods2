@@ -19,10 +19,11 @@
 
 
 def elevenish?(n) #22/11 =2 
+    de_nmo = (n-1)/11 #to check if its one over
     de_n = n/11
-    de_nmo = (n-1)/11
 
-    if de_n * 11 == n || de_nmo * 11 == n
+
+    if de_n * 11 == n || (de_nmo * 11)+1 == n
         return true
 
     else 
@@ -37,7 +38,31 @@ end
 	
 # TODO - write ice_cream_party?
 
+def ice_cream_party?(icecream,candy) #0= bad 1= good 2=great
+	if icecream >= candy*2 || candy >= icecream*2 #if either is twice the other one then great ice(10,5)
+		return 2
+
+	end	
+	if icecream >= 5 || candy >=5 # if either are equal or more than it is good
+		return 1
+	end
+		
+
+	if icecream < 5 && candy < 5 # if both are less than 5 then bad
+		return 0
+	end	
+
+
+
+end
+
+
+
 # TODO - write successful_squirrel_party?
+
+
+
+
 
 # TODO - write ticket
 

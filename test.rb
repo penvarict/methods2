@@ -38,14 +38,31 @@ describe 'Methods2' do
 
   end
 
+  describe 'ice_cream_party?' do
+    it 'how dope is the party??' do
+      ice_cream_party?(5,5).must_equal(1)
+
+    end
+
+    it 'how dope is the party??' do
+      ice_cream_party?(10,5).must_equal(2)
+
+    end
+
+    it 'how dope is the party??' do
+      ice_cream_party?(1,1).must_equal(0)
+
+    end
+
+    it 'how dope is the party??' do
+      ice_cream_party?(5,10).must_equal(2)
+
+    end
 
 
 
 
 
-
-
-
-
+  end
 
 end
