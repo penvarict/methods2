@@ -23,7 +23,7 @@ describe 'Methods2' do
 
 
     it 'is the number elevenish?' do
-      elevenish?(23).must_equal(true)
+      elevenish?(23).must_equal(true) #23-1 = 22  22/11 =2 
 
 
     end   
@@ -60,6 +60,38 @@ describe 'Methods2' do
     end
 
 
+
+
+
+  end
+
+  describe 'successful_squirrel_party?' do
+
+    it 'is it a good party?' do
+
+      successful_squirrel_party?(60,false).must_equal(true) #60 exact and not weekend
+
+    end
+    it 'is it a good party?' do
+
+      successful_squirrel_party?(62,false).must_equal(false) #not weekend and over
+
+    end
+
+    it 'is it a good party?' do
+      successful_squirrel_party?(60,true).must_equal(true)
+
+    end
+
+    it 'is it a good party?' do
+      successful_squirrel_party?(30,false).must_equal(false)
+
+    end
+
+    it 'is it a good party?' do
+    successful_squirrel_party?(100,true).must_equal(true)
+
+    end
 
 
 

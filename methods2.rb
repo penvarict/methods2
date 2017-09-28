@@ -59,7 +59,21 @@ end
 
 
 # TODO - write successful_squirrel_party?
-
+def successful_squirrel_party?(nuts, weekend) #nuts ==  int weekend == true or false
+	if weekend == true
+		if nuts >= 40
+			return true
+		else
+			return false
+		end
+	else
+		if nuts >= 40 && nuts <= 60
+			return true
+		else
+			return false
+		end
+	end
+ end
 
 
 
