@@ -215,7 +215,25 @@ describe 'Methods2' do
           rotate_left([2,4,6]).must_equal([4,6,2])
         end
     end
+    
+  describe'double23?' do
+      it 'does the array have 2 twos or 2 threes?' do
+          double23?(twoAr).must_equal(true)
+      end
 
+      it 'does the array have 2 twos or 2 threes?' do
+          double23?(threeAr).must_equal(true)
+      end
+
+
+      it 'does the array have 2 twos or 2 threes?' do
+          double23?(noAr).must_equal(false)
+      end
+
+      it 'does the array have 2 twos or 2 threes?' do
+          double23?(nillAr).must_equal(false)
+      end
+    end
 
 
 end
