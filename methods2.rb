@@ -118,24 +118,32 @@ def less_by_ten?(a,b,c)
 end
 # TODO - write fizz_string
 def fizz_string(str)
-    if str[0] == "f"
-        return "Fizz"
-    end
-    if str[-1] == "b"
-        return "Buzz"
-    end
-
-    if str[0] == "f" && str[-1] == "b"
-        return "BuzzFizz"
-    else 
-        return str
-    end
+	if str[0].downcase == "f" and str[-1].downcase == "b"
+		return "FizzBuzz"
+	end
+	if str[0].downcase == "f"
+		return "Fizz"
+	end
+	if str[-1].downcase == "b"
+		return "Buzz"
+	end
+	return str
 end
 
 
-
 # TODO - write first_last_six?
+ def first_last_six?(list)
+ 		if list[0] == 6 || list[-1] == 6
+ 			return true
+ 		else
+ 			return false
+ 		end
+end 	
+
 
 # TODO - write rotate_left
+def rotate_left(trio)
+	return trio[1], trio[2], trio[0]
+end
 
-# TODO - write double23?
+

@@ -1,7 +1,18 @@
 require './test_setup'
 require './methods2'
+arrayOne = [6]
+arrayTwo = [6,6,6]
+arrayThree = [4,5,6,4,4]
+arrayFour = [3,2,6]
+arrayZero = []
+triotest = [1,2,3]
+twoAr = [2,2,9]
 
+threeAr = [3,3,2]
 
+noAr = [1,1,1]
+
+nillAr = []
 describe 'Methods2' do
   describe 'elevenish?'do
     it 'is the number elevenish?' do 
@@ -161,7 +172,7 @@ describe 'Methods2' do
         fizz_string("yomomma").must_equal("yomomma")
       end
       it 'does a string start with f or end with b' do
-        fizz_string("famb").must_equal("BuzzFizz")
+        fizz_string("famb").must_equal("FizzBuzz")
       end
       it 'does a string start with f or end with b' do
         fizz_string("fork").must_equal("Fizz")
@@ -173,8 +184,38 @@ describe 'Methods2' do
     end
 
     describe 'first_last_six?' do
-      it
+
+      it'does the array start or end with 6' do
+        first_last_six?(arrayZero).must_equal(false) #no elements in list
+      end
+      it 'does the array start or end with 6' do 
+        first_last_six?(arrayOne).must_equal(true)
+
+      end
+      it'does the array start or end with 6' do
+        first_last_six?(arrayTwo).must_equal(true)
+      end
+      it 'does the array start or end with 6' do 
+        first_last_six?(arrayThree).must_equal(false) 
+
+      end
+      it'does the array start or end with 6' do
+        first_last_six?(arrayFour).must_equal(true) 
+      end
+
+
+
+
 
 
     end
+
+    describe 'rotate_left' do 
+        it 'is the trio fliped left?' do
+          rotate_left([2,4,6]).must_equal([4,6,2])
+        end
+    end
+
+
+
 end
